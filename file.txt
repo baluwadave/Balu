@@ -1,3 +1,4 @@
-Hi my name is pranav
-okey then what?
-Ahhhh! just fun.
+Hi my name is pranav (pushed)
+okey then what? (pulled)
+Ahhhh! just fun. (pushed)
+It's fine.
