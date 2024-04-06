@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                git branch: 'main', credentialsId: 'balu-github-jenkins', url: 'https://github.com/baluwadave/Jenkins.git'
+                git branch: 'main', url: 'https://github.com/baluwadave/Jenkins'
                 echo 'Hello World'
             }
         }
