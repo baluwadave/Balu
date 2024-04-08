@@ -1,4 +1,4 @@
-package com.studentapp-ui.app;
+/*package com.studentapp-ui.app;
 
 /**
  * Hello world!
