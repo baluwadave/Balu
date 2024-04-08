@@ -10,8 +10,7 @@ pipeline {
         }
         stage ('Build'){
             steps{
-                sh '''cd /root/Balu/Jenkins/my-app 
-                      mvn clean package'''
+                sh "mvn clean package"
                 echo "build done"
             }
         }
