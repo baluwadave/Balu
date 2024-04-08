@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- bf ke sath ghumane ke liye >>>>>>> dev2
-=======
-Hi Shweta How are you and what are you going to do and need anything to be change 
->>>>>>> dev2
-=======
-HHi Hi Balu How are you are going to check confilct concept 
->>>>>>> dev1
