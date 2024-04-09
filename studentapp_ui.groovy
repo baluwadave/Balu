@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                git branch: 'main', url: 'https://github.com/baluwadave/Jenkins'
-                echo 'Hello World'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/baluwadave/studentapp'
+                echo 'git pull done of developer branch'
             }
         }
         stage ('Build'){
