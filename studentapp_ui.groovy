@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/baluwadave/studentapp.ui'
+                git branch: 'master', changelog: false, poll: false, url: 'https://github.com/baluwadave/studentapp.ui'
                 echo 'git pull done of developer branch'
             }
         }
