@@ -8,7 +8,7 @@ pipeline {
                 echo 'git pull done of developer branch'
             }
         }
-    }
+    
         stage ('Build'){
             steps{
                 sh '/opt/apache-maven-3.9.6/bin/mvn clean package'
@@ -17,7 +17,7 @@ pipeline {
         }
         stage ('Test'){
             steps{
-                sh '''/opt/apache-maven-3.9.6/bin/mvn sonar:sonar \\
+                sh '''run /opt/apache-maven-3.9.6/bin/mvn sonar:sonar \\
                 -Dsonar.projectKey=studentapp-ui \\
                 -Dsonar.host.url=http://13.127.46.220:9000 \\
                 -Dsonar.login=3beda3d515009d7f90566b92bd884563ad2657cf'''           
@@ -35,7 +35,8 @@ pipeline {
                 echo "depoly done"
             }
         }                                                            
-}
+    }
+}    
 
 
 
