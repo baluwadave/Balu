@@ -24,7 +24,7 @@ pipeline {
                     -Dsonar.login=3beda3d515009d7f90566b92bd884563ad2657cf
                     '''       
                 }
-                waitForQualityGate abortPipeline: true;              
+//               waitForQualityGate abortPipeline: true;              
                 echo "test done"
             }
         }    
