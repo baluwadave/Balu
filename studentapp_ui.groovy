@@ -28,11 +28,6 @@ pipeline {
                 echo "test done"
             }
         }    
-        stage ('Quality-Test'){
-            steps{
-                echo "Quality-check done"
-            }
-        }
         stage ('Deploy'){
             steps{
                 echo "deploy done"
