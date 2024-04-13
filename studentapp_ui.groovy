@@ -18,7 +18,7 @@ pipeline {
         stage ('Test'){
             steps{
                 withSonarQubeEnv(credentialsId: 'sonar-token') {
-                    waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token'
+                    waitForQualityGate abortPipeline: true;
                     sh '''/opt/apache-maven-3.9.6/bin/mvn sonar:sonar \\
                     -Dsonar.projectKey=studentapp-ui \\
                     -Dsonar.host.url=http://13.232.148.171:9000 \\
