@@ -18,16 +18,14 @@ pipeline {
         stage ('Test'){
             steps{
                 withSonarQubeEnv(credentialsId: 'sonar-token') {
-                    waitForQualityGate abortPipeline: true;
                     sh '''/opt/apache-maven-3.9.6/bin/mvn sonar:sonar \\
                     -Dsonar.projectKey=studentapp-ui \\
                     -Dsonar.host.url=http://13.232.148.171:9000 \\
                     -Dsonar.login=3beda3d515009d7f90566b92bd884563ad2657cf
                     '''       
                 }
-                   
+                waitForQualityGate abortPipeline: true;              
                 echo "test done"
-
             }
         }    
         stage ('Quality-Test'){
@@ -35,13 +33,13 @@ pipeline {
                 echo "Quality-check done"
             }
         }
-        stage ('Depoly'){
+        stage ('Deploy'){
             steps{
-                echo "depoly done"
+                echo "deploy done"
             }
         }                                                            
     }
-}    
+}
 
 
 
