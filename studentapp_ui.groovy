@@ -17,6 +17,9 @@ pipeline {
         }
         stage ('Test'){
             steps{
+                withSonarQubeEnv(credentialsId: 'sonar-token') {
+    // some block
+                }
                 waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token'
                 sh '''/opt/apache-maven-3.9.6/bin/mvn sonar:sonar \\
                 -Dsonar.projectKey=studentapp-ui \\
